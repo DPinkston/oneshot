@@ -2,9 +2,35 @@
   "expo": {
     "name": "oneshot",
     "slug": "oneshot",
+    "main": "expo-router/entry",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/images/icon.png",
+    "scheme": "adwatching",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "plugins": [
+      "expo-router",
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(EZStreet) to access your contacts."
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.dpink.oneshot",
+      "permissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "46ac314b-6fc4-40f3-80e6-677366825200"
+      }
+    }
   }
 }
