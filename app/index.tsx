@@ -3,6 +3,11 @@ import {SafeAreaView,  StatusBar,  StyleSheet,  useColorScheme,  View, Dimension
 import buttonsData from '../components/buttonsData';
 // import 'react-native-reanimated';
 import { router } from 'expo-router';
+// import { SystemUi } from 'expo-system-ui';
+import 'expo-dev-client';
+import AppLayout from "./_layouts"
+// import Constants from 'expo-constants';
+// console.log(Constants.systemFonts);
 // import 'expo-dev-client';
 
 // import { initializeApp } from 'expo-ads-admob';
@@ -22,17 +27,6 @@ import { router } from 'expo-router';
 // mobileAds();
 
 
-const { height, width } = Dimensions.get('window');
-
-const darkColors = {
-  background: '#121212',
-  text: '#FFFFFF',
-  card: '#333333',
-  accent: '#BB86FC',
-};
-
-
-
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -42,7 +36,22 @@ function App(): React.JSX.Element {
   const [currentPart, setCurrentPart] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [shouldReload, setshouldReload] = useState(false);
+  const colorScheme = useColorScheme(); // Determines if the device is in dark or light mode
   
+  
+  const { height, width } = Dimensions.get('window');
+  
+  const darkColors = {
+    background: '#121212',
+    text: '#FFFFFF',
+    card: '#333333',
+    accent: '#BB86FC',
+  };
+  
+  
+  // useEffect(() => {
+  //   SystemUi.setStatusBarStyle(colorScheme === 'dark' ? 'light' : 'dark');
+  // }, [colorScheme]);
   
 
   useEffect(() => {

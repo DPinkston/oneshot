@@ -1,0 +1,27 @@
+# Exclude node_modules if it will be reinstalled in the build process
+node_modules
+
+# Exclude build or output folders
+.expo
+.cache
+build
+dist
+.DS_Store
+
+# Exclude your local configuration files
+.env.local
+.env.development
+
+# Exclude your version control folders
+.git
+.gitignore
+
+# Exclude logs
+*.log
+
+# Exclude temporary files and system files
+.vscode
+Thumbs.db
+*.tmp
+/android
+/ios

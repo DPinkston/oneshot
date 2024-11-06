@@ -2,7 +2,6 @@
   "expo": {
     "name": "oneshot",
     "slug": "oneshot",
-    "main": "expo-router/entry",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
@@ -12,15 +11,27 @@
       "**/*"
     ],
     "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
       "expo-router",
+      [
+        "react-native-google-mobile-ads",
+    
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~3347511713"
+        }
+      ],
       [
         "expo-contacts",
         {
-          "contactsPermission": "Allow $(EZStreet) to access your contacts."
+          "contactsPermission": "Allow $(oneshot) to access your contacts."
         }
       ]
     ],
     "android": {
+      "googleServicesFile": "./google-services.json",
       "package": "com.dpink.oneshot",
       "permissions": [
         "android.permission.READ_CONTACTS",
