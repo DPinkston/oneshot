@@ -37,7 +37,7 @@ on:
 env:
   PROJECT_ID: "adjunk" # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
-  SERVICE: 'my-service' # TODO: update to your service name
+  SERVICE: 'oneshot' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: '36207894816-compute@developer.gserviceaccount.com"
 
 jobs:
